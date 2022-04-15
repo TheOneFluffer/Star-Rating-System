@@ -16,12 +16,27 @@ namespace Star_Rating_System
             //Create a loop to print output
             do
             {
-                Console.Write("Full ");
                 i++;
+                Console.Write("Full ");
             }
             while (i <= StarRating);
+            decimal Decimal = Convert.ToDecimal((StarRating - i) + 1);
+            if (Decimal > 0)
             {
                 Console.Write("Half ");
+            }
+            else
+            {
+                Console.Write("Empty ");
+            }
+
+            //Create something that subtracts 5 from user input
+            decimal Reduce = 5 - StarRating;
+
+            //Create another loop that completes the code
+            for (decimal j = 1; j < Reduce; j++)
+            {
+                Console.Write("Empty ");
             }
         }
     }
